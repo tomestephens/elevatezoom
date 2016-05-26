@@ -70,7 +70,7 @@ if (typeof Object.create !== 'function') {
                 } else {
                     self.zoomImagePre = $(this).data("image");
                 }
-                self.swaptheimage($(this).data("image"), self.zoomImagePre);
+                self.swapTheImage($(this).data("image"), self.zoomImagePre);
                 return false;
             });
 
@@ -1124,7 +1124,7 @@ if (typeof Object.create !== 'function') {
             }
         },
 
-        swaptheimage: function (smallimage, largeimage) {
+        swapTheImage: function (smallimage, largeimage) {
             var self = this;
             var newImg = new Image();
 
@@ -1146,10 +1146,8 @@ if (typeof Object.create !== 'function') {
 
             };
             newImg.src = largeimage; // this must be done AFTER setting onload
-
         },
         swapAction: function (smallimage, largeimage) {
-
             var self = this;
 
             var newImg2 = new Image();
@@ -1373,9 +1371,7 @@ if (typeof Object.create !== 'function') {
             //loop through the gallery options and set them in list for fancybox
             self.gallerylist = [];
             if (self.options.gallery) {
-
                 $('#' + self.options.gallery + ' a').each(function () {
-
                     var img_src = '';
                     if ($(this).data(self.options.attrImageZoomSrc)) {
                         img_src = $(this).data(self.options.attrImageZoomSrc);
